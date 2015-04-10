@@ -1,7 +1,7 @@
 {
   "name": "ember-functional-validation",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1-beta",
+  "description": "Yet another validation library for EmberJS, this one takes a much more functional approach",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/foxnewsnetwork/ember-functional-validation",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Thomas Chen",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
@@ -34,9 +34,13 @@
     "ember-try": "0.0.4"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "validation",
+    "validate",
+    "functional"
   ],
   "dependencies": {
+    "ember-cli-coffeescript": "0.10.0",
     "ember-cli-babel": "^5.0.0"
   },
   "ember-addon": {
