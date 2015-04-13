@@ -11,7 +11,11 @@ test 'it should all exist', (assert) ->
 
 test 'errorLift should always return a map', (assert) ->
   map = errorLift "dog", new Error "are nice"
-  assert.ok map instanceof Ember.Map
+  assert.ok map.has
+  assert.ok map.get
+  assert.ok map.set
+  assert.ok map.forEach
+  assert.ok map.map
   assert.equal map.size, 1
   assert.deepEqual map.get("dog"), ["are nice"]
 

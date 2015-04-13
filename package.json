@@ -1,6 +1,6 @@
 {
   "name": "ember-functional-validation",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "description": "Yet another validation library for EmberJS, this one takes a much more functional approach",
   "directories": {
     "doc": "doc",

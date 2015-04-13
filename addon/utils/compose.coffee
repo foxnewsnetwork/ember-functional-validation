@@ -17,8 +17,8 @@ compose = (vf, vg) ->
 merge = (errorsA, errorsB) ->
   return errorsA if Ember.isBlank errorsB
   return errorsB if Ember.isBlank errorsA
-  throw new Error "expected an Ember.Map but instead got a #{errorsA}" unless errorsA.has? and errorsA.get?
-  throw new Error "expected an Ember.Map but instead got a #{errorsB}" unless errorsB.forEach?
+  throw new Error "expected some sort of an observable enumerable object but instead got a #{errorsA}" unless errorsA.has? and errorsA.get?
+  throw new Error "expected some sort of an observable enumerable object but instead got a #{errorsB}" unless errorsB.forEach?
   errorsB.forEach (messages, attributeName) ->
     if errorsA.has attributeName
       messages = errorsA.get(attributeName).concat messages

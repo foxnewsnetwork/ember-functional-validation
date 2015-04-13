@@ -1,11 +1,8 @@
 `import Ember from 'ember'`
-
-lll = (x) ->
-  console.log x
-  x
+`import ErrorMap from './error-map'`  
 
 errorLift = (attribute, error) ->
-  errorsMap = new Ember.Map()
+  errorsMap = new ErrorMap()
   if error? and error.message?
     messages = Ember.A [error.message]
   else
