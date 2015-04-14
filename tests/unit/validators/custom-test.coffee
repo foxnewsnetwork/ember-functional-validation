@@ -23,6 +23,18 @@ test 'it should error out if the checker returns an error msg', (assert) ->
     assert.equal errors.size, 1
     assert.deepEqual errors.get("email"), ["bad model is bad"]
 
+test 'it should properly have the attribute passed in', (assert) ->
+  model =
+    donkey: "animal"
+
+  checker = (model, attribute) ->
+    assert.equal attribute, "donkey"
+    "animal should be donkey"
+
+  custom "donkey", checker, model
+  .catch (errors) ->
+    assert.deepEqual errors.get("donkey"), ["animal should be donkey"]
+
 test 'it should resolve promise checkers as well', (assert) ->
   model = 
     email: "foxnewsnetwork@gmail.com"

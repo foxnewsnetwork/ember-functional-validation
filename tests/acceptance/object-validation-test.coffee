@@ -60,4 +60,20 @@ test 'it should pass objects which are good', (assert) ->
     assert.equal model, checkedModel
   .catch (errors) ->
     assert.ok false, "validation should not fail"
-    
+
+test 'custom validation should have the attribute passed in', (assert) ->
+  validFun = FunctionalValidation.create
+    email:
+      presence: true
+      custom: (model, attribute) ->
+        assert.equal attribute, "email"
+        return null
+
+  model =
+    email: "e@mail.co"
+
+  validFun model
+  .then (checkedModel) ->
+    assert.equal model, checkedModel
+  .catch (errors) ->
+    assert.ok false, "validation should not fail"
