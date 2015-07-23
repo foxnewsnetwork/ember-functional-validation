@@ -1,6 +1,6 @@
 {
   "name": "ember-functional-validation",
-  "version": "0.0.2-beta-3",
+  "version": "0.0.3-alpha",
   "description": "Yet another validation library for EmberJS, this one takes a much more functional approach",
   "directories": {
     "doc": "doc",
@@ -40,7 +40,7 @@
     "functional"
   ],
   "dependencies": {
-    "ember-cli-coffeescript": "0.10.0",
+    "ember-cli-coffeescript": "^0.11.0",
     "ember-cli-babel": "^5.0.0"
   },
   "ember-addon": {
