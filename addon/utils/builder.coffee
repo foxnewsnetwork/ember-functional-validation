@@ -10,7 +10,7 @@ build = ({attribute, validatorName, validatorOptions}) ->
     when "absence" then (model) -> absence attribute, validatorOptions, model
     when "custom", "inline" then (model) -> custom attribute, validatorOptions, model
     when "lessThan" then (model) -> numeric.lessThan attribute, validatorOptions, model
-    when "lessThanEqualTo" then (model) -> numeric.lessThan attribute, validatorOptions, model
+    when "lessThanEqualTo" then (model) -> numeric.lessThanEqualTo attribute, validatorOptions, model
     when "greaterThan" then (model) -> numeric.greaterThan attribute, validatorOptions, model
     when "greaterThanEqualTo" then (model) -> numeric.greaterThanEqualTo attribute, validatorOptions, model
     when "equal" then numeric.equal attribute, validatorOptions, model
